@@ -1,0 +1,28 @@
+{
+  "name": "weather-dashboard",
+  "version": "1.0.0",
+  "description": "A modern weather dashboard that fetches real-time data from a public weather API",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
+    "build": "echo 'No build step needed for this project'"
+  },
+  "keywords": [
+    "weather",
+    "dashboard",
+    "api",
+    "real-time"
+  ],
+  "author": "davidwkoch-design",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "axios": "^1.6.0",
+    "dotenv": "^16.3.1",
+    "cors": "^2.8.5"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}

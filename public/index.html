@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1>🌤️ Weather Dashboard</h1>
+            <p>Real-time weather information at your fingertips</p>
+        </header>
+
+        <!-- Search Section -->
+        <section class="search-section">
+            <div class="search-box">
+                <input 
+                    type="text" 
+                    id="cityInput" 
+                    class="search-input" 
+                    placeholder="Search for a city..."
+                    autocomplete="off"
+                >
+                <button id="searchBtn" class="search-btn">Search</button>
+            </div>
+            <div id="suggestions" class="suggestions"></div>
+        </section>
+
+        <!-- Current Weather -->
+        <section id="currentWeatherSection" class="current-weather-section hidden">
+            <div class="weather-card">
+                <div class="weather-header">
+                    <div>
+                        <h2 id="cityName"></h2>
+                        <p id="weatherDescription" class="weather-desc"></p>
+                    </div>
+                    <div class="weather-icon">
+                        <span id="weatherEmoji" class="emoji">🌤️</span>
+                    </div>
+                </div>
+
+                <div class="temperature-large">
+                    <span id="tempLarge">--</span>°C
+                </div>
+
+                <div class="weather-details-grid">
+                    <div class="detail-item">
+                        <span class="detail-label">Feels Like</span>
+                        <span class="detail-value" id="feelsLike">--°C</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Min / Max</span>
+                        <span class="detail-value" id="tempRange">-- / --°C</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Humidity</span>
+                        <span class="detail-value" id="humidity">--%</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Pressure</span>
+                        <span class="detail-value" id="pressure">-- hPa</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Wind Speed</span>
+                        <span class="detail-value" id="windSpeed">-- m/s</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Visibility</span>
+                        <span class="detail-value" id="visibility">-- km</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Sunrise</span>
+                        <span class="detail-value" id="sunrise">--:--</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Sunset</span>
+                        <span class="detail-value" id="sunset">--:--</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Forecast Section -->
+        <section id="forecastSection" class="forecast-section hidden">
+            <h3>5-Day Forecast</h3>
+            <div id="forecastContainer" class="forecast-container"></div>
+        </section>
+
+        <!-- Error Message -->
+        <div id="errorMessage" class="error-message hidden"></div>
+
+        <!-- Loading Spinner -->
+        <div id="loadingSpinner" class="loading-spinner hidden">
+            <div class="spinner"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
